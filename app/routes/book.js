@@ -8,7 +8,7 @@ function getBooks(req, res) {
 	// Query DB. If no errors, send all books
 	let query = Book.find({});
 	query.exec((err, books) => {
-		if (er) res.send(err);
+		if (err) res.send(err);
 		// if no errors, send books back to client
 		res.json(books);
 	});
